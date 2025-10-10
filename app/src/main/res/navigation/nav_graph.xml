@@ -3,7 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/DailyHabitsFragment">
+
+    <fragment
+        android:id="@+id/DailyHabitsFragment"
+        android:name="com.example.remind.DailyHabitsFragment"
+        android:label="@string/daily_habits"
+        tools:layout="@layout/fragment_daily_habits">
+
+        <action
+            android:id="@+id/action_DailyHabitsFragment_to_HabitDetailsFragment"
+            app:destination="@id/HabitDetailsFragment" />
+        <action
+            android:id="@+id/action_DailyHabitsFragment_to_AddHabitFragment"
+            app:destination="@id/AddHabitFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddHabitFragment"
+        android:name="com.example.remind.AddHabitFragment"
+        android:label="@string/add_new_habit"
+        tools:layout="@layout/fragment_add_habit">
+
+        <action
+            android:id="@+id/action_AddHabitFragment_to_DailyHabitsFragment"
+            app:destination="@id/DailyHabitsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HabitDetailsFragment"
+        android:name="com.example.remind.HabitDetailsFragment"
+        android:label="@string/habit_details"
+        tools:layout="@layout/fragment_habit_details">
+
+        <action
+            android:id="@+id/action_HabitDetailsFragment_to_DailyHabitsFragment"
+            app:destination="@id/DailyHabitsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/FirstFragment"

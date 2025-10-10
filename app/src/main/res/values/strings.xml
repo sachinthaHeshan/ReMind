@@ -43,4 +43,60 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+    <!-- Daily Habits Strings -->
+    <string name="good_morning">Good Morning</string>
+    <string name="today_date">Today, October 10</string>
+    <string name="habits_completed">0 of 0 habits completed</string>
+    <string name="todays_habits">Today\'s Habits</string>
+    <string name="weekly_overview">Weekly Overview</string>
+    <string name="day_streak">Day Streak</string>
+    <string name="this_week">This Week</string>
+    <string name="total_habits">Total Habits</string>
+    <string name="add_habit">Add Habit</string>
+    <string name="no_habits">No habits</string>
+    <string name="no_habits_yet">No habits yet</string>
+    <string name="add_first_habit">Tap the button below to add your first habit</string>
+    <string name="habit_icon">Habit icon</string>
+    <string name="time">Time</string>
+    <string name="streak">Streak</string>
+    <string name="zero">0</string>
+
+    <!-- Add Habit Dialog -->
+    <string name="add_new_habit">Add New Habit</string>
+    <string name="habit_name">Habit name</string>
+    <string name="category">Category</string>
+    <string name="health">Health</string>
+    <string name="mindfulness">Mindfulness</string>
+    <string name="learning">Learning</string>
+    <string name="hydration">Hydration</string>
+    <string name="sleep">Sleep</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="select_time">Select time</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_habit">Save Habit</string>
+    <string name="close">Close</string>
+    <string name="expand">Expand</string>
+
+    <!-- Navigation -->
+    <string name="daily_habits">Daily Habits</string>
+    <string name="habit_details">Habit Details</string>
+
+    <!-- Habit Details -->
+    <string name="statistics">Statistics</string>
+    <string name="times_completed">Times Completed</string>
+    <string name="best_streak">Best Streak</string>
+    <string name="completion_rate">Completion Rate</string>
+    <string name="last_7_days">Last 7 Days</string>
+    <string name="edit_habit">Edit Habit</string>
+    <string name="delete_habit">Delete Habit</string>
+    <string name="completed">Completed</string>
+
+    <!-- Add Habit Fragment -->
+    <string name="select_category_description">Choose a category for your habit</string>
+    <string name="select_time_description">When do you want to be reminded?</string>
+    <string name="frequency">Frequency</string>
+    <string name="select_frequency_description">How often do you want to do this habit?</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string> 
 </resources>

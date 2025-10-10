@@ -1,3 +1,50 @@
 <resources>
+    <!-- Margins & Padding -->
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">20dp</dimen>
+    <dimen name="spacing_xxl">24dp</dimen>
+    <dimen name="spacing_xxxl">32dp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="corner_radius_sm">8dp</dimen>
+    <dimen name="corner_radius_md">12dp</dimen>
+    <dimen name="corner_radius_lg">16dp</dimen>
+    <dimen name="corner_radius_xl">20dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_sm">16dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+    <dimen name="icon_size_xl">48dp</dimen>
+
+    <!-- Card Sizes -->
+    <dimen name="card_category_width">90dp</dimen>
+    <dimen name="card_category_height">110dp</dimen>
+    <dimen name="card_day_status_size">40dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_xs">12sp</dimen>
+    <dimen name="text_size_sm">14sp</dimen>
+    <dimen name="text_size_md">16sp</dimen>
+    <dimen name="text_size_lg">18sp</dimen>
+    <dimen name="text_size_xl">20sp</dimen>
+    <dimen name="text_size_xxl">24sp</dimen>
+    <dimen name="text_size_xxxl">32sp</dimen>
+
+    <!-- Progress -->
+    <dimen name="progress_bar_height">8dp</dimen>
+    
+    <!-- Stroke Width -->
+    <dimen name="stroke_width_sm">1dp</dimen>
+    <dimen name="stroke_width_md">2dp</dimen>
+    <dimen name="stroke_width_lg">4dp</dimen>
 </resources>
