@@ -314,7 +314,7 @@
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
-                                app:cardBackgroundColor="#6366F1"
+                                app:cardBackgroundColor="@color/category_sleep"
                                 app:cardCornerRadius="12dp"
                                 app:cardElevation="0dp"
                                 app:strokeWidth="0dp">
