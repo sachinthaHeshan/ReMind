@@ -26,6 +26,12 @@
         tools:layout="@layout/fragment_mood_journal" />
 
     <fragment
+        android:id="@+id/HydrationFragment"
+        android:name="com.example.remind.HydrationFragment"
+        android:label="@string/hydration_tracker"
+        tools:layout="@layout/fragment_hydration" />
+
+    <fragment
         android:id="@+id/AddHabitFragment"
         android:name="com.example.remind.AddHabitFragment"
         android:label="@string/add_new_habit"

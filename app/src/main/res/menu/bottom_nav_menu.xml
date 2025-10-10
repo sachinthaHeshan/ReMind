@@ -6,6 +6,11 @@
         android:title="@string/habits" />
 
     <item
+        android:id="@+id/HydrationFragment"
+        android:icon="@drawable/ic_water"
+        android:title="@string/water" />
+
+    <item
         android:id="@+id/MoodJournalFragment"
         android:icon="@drawable/ic_mood"
         android:title="@string/mood" />

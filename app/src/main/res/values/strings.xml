@@ -103,6 +103,7 @@
     <!-- Bottom Navigation -->
     <string name="habits">Habits</string>
     <string name="mood">Mood</string>
+    <string name="water">Water</string>
 
     <!-- Mood Journal -->
     <string name="mood_journal">Mood Journal</string>
@@ -114,4 +115,28 @@
     <string name="no_mood_entries">No mood entries yet</string>
     <string name="start_tracking_mood">Start tracking your mood to see patterns</string>
     <string name="delete">Delete</string>
+
+    <!-- Hydration Tracker -->
+    <string name="hydration_tracker">Hydration Tracker</string>
+    <string name="todays_progress">Today\'s Progress</string>
+    <string name="quick_add">Quick Add</string>
+    <string name="tap_to_log_water">Tap to log water intake</string>
+    <string name="daily_goal">Daily Goal</string>
+    <string name="change">Change</string>
+    <string name="reminder_notifications">Reminder Notifications</string>
+    <string name="get_reminded_every_2_hours">Get reminded every 10 seconds (testing)</string>
+    <string name="todays_history">Today\'s History</string>
+    <string name="no_water_logged">No water logged yet</string>
+    <string name="start_logging_water">Start logging your water intake</string>
+    <string name="enter_custom_amount">Enter custom amount (ml)</string>
+    <string name="add_water">Add Water</string>
+    <string name="water_added">Water added successfully!</string>
+    <string name="enter_daily_goal">Enter daily goal (ml)</string>
+    <string name="goal_updated">Goal updated successfully!</string>
+    <string name="time_to_drink_water">Time to drink water!</string>
+    <string name="stay_hydrated">Stay hydrated throughout the day</string>
+    <string name="ml_remaining">%d ml remaining</string>
+    <string name="goal_achieved">🎉 Goal achieved!</string>
+    <string name="reminder_notification_started">Reminder notification Started</string>
+    <string name="you_will_receive_reminders">You will receive reminders every 10 seconds (testing)</string>
 </resources>

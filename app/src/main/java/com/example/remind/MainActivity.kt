@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "Step 4: Setting up AppBarConfiguration")
             // Set up AppBarConfiguration with top-level destinations
             appBarConfiguration = AppBarConfiguration(
-                setOf(R.id.DailyHabitsFragment, R.id.MoodJournalFragment)
+                setOf(R.id.DailyHabitsFragment, R.id.HydrationFragment, R.id.MoodJournalFragment)
             )
             
             Log.d("MainActivity", "Step 5: Setting up bottom navigation")
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity", "Navigation: Changed to ${destination.id} - ${destination.label}")
                 try {
                     when (destination.id) {
-                        R.id.DailyHabitsFragment, R.id.MoodJournalFragment -> {
+                        R.id.DailyHabitsFragment, R.id.HydrationFragment, R.id.MoodJournalFragment -> {
                             binding.bottomNavigation.visibility = View.VISIBLE
                             Log.d("MainActivity", "Bottom nav: VISIBLE")
                         }
