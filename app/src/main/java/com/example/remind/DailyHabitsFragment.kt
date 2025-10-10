@@ -26,10 +26,9 @@ class DailyHabitsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        android.util.Log.d("DailyHabitsFragment", "onCreateView called")
         _binding = FragmentDailyHabitsBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/mood_journal"
+            app:titleTextColor="@color/text_primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <!-- Current Mood Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/how_are_you_feeling"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/select_your_current_mood"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                        android:textColor="@color/text_secondary" />
+
+                    <!-- Emoji Selector Grid -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <!-- Row 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <!-- Happy -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_happy"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😊"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Excited -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_excited"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🤩"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Neutral -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_neutral"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😐"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Sad -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_sad"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😢"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Angry -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_angry"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😠"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <!-- Row 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <!-- Tired -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_tired"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😴"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Anxious -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_anxious"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😰"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Relaxed -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_relaxed"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="😌"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Loved -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_loved"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🥰"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Sick -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emoji_sick"
+                                android:layout_width="0dp"
+                                android:layout_height="64dp"
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/card_stroke"
+                                app:strokeWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🤒"
+                                    android:textSize="32sp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Optional Note -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_note"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/add_note_optional"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3"
+                            android:minLines="2" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Save Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save_mood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/save_mood"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Mood History Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="@string/mood_history"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold" />
+
+                    <!-- Mood List -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_moods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingHorizontal="8dp"
+                        android:paddingBottom="8dp"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_mood" />
+
+                    <!-- Empty State -->
+                    <LinearLayout
+                        android:id="@+id/empty_state_mood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="32dp"
+                        android:visibility="gone"
+                        tools:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😊"
+                            android:textSize="64sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/no_mood_entries"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/start_tracking_mood"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                            android:textColor="@color/text_tertiary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -20,6 +20,12 @@
     </fragment>
 
     <fragment
+        android:id="@+id/MoodJournalFragment"
+        android:name="com.example.remind.MoodJournalFragment"
+        android:label="@string/mood_journal"
+        tools:layout="@layout/fragment_mood_journal" />
+
+    <fragment
         android:id="@+id/AddHabitFragment"
         android:name="com.example.remind.AddHabitFragment"
         android:label="@string/add_new_habit"
