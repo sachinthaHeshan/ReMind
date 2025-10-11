@@ -1,16 +1,15 @@
-package com.example.remind
+package com.example.remind.data.repository
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.remind.data.model.Habit
+import com.example.remind.widget.HabitWidgetProvider
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-/**
- * Repository class to manage Habit data in SharedPreferences
- */
 class HabitRepository(private val context: Context) {
 
     private val sharedPreferences: SharedPreferences =

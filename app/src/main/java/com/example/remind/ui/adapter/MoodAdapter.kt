@@ -1,10 +1,11 @@
-package com.example.remind
+package com.example.remind.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.remind.data.model.Mood
 import com.example.remind.databinding.ItemMoodBinding
 import java.text.SimpleDateFormat
 import java.util.*

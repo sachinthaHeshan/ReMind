@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/DailyHabitsFragment"
-        android:name="com.example.remind.DailyHabitsFragment"
+        android:name="com.example.remind.ui.fragments.habit.DailyHabitsFragment"
         android:label="@string/daily_habits"
         tools:layout="@layout/fragment_daily_habits">
 
@@ -24,19 +24,19 @@
 
     <fragment
         android:id="@+id/MoodJournalFragment"
-        android:name="com.example.remind.MoodJournalFragment"
+        android:name="com.example.remind.ui.fragments.mood.MoodJournalFragment"
         android:label="@string/mood_journal"
         tools:layout="@layout/fragment_mood_journal" />
 
     <fragment
         android:id="@+id/HydrationFragment"
-        android:name="com.example.remind.HydrationFragment"
+        android:name="com.example.remind.ui.fragments.hydration.HydrationFragment"
         android:label="@string/hydration_tracker"
         tools:layout="@layout/fragment_hydration" />
 
     <fragment
         android:id="@+id/AddHabitFragment"
-        android:name="com.example.remind.AddHabitFragment"
+        android:name="com.example.remind.ui.fragments.habit.AddHabitFragment"
         android:label="@string/add_new_habit"
         tools:layout="@layout/fragment_add_habit">
 
@@ -47,7 +47,7 @@
 
     <fragment
         android:id="@+id/EditHabitFragment"
-        android:name="com.example.remind.EditHabitFragment"
+        android:name="com.example.remind.ui.fragments.habit.EditHabitFragment"
         android:label="@string/edit_habit"
         tools:layout="@layout/fragment_add_habit">
 
@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/HabitDetailsFragment"
-        android:name="com.example.remind.HabitDetailsFragment"
+        android:name="com.example.remind.ui.fragments.habit.HabitDetailsFragment"
         android:label="@string/habit_details"
         tools:layout="@layout/fragment_habit_details">
 
@@ -73,7 +73,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.remind.FirstFragment"
+        android:name="com.example.remind.ui.fragments.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.remind.SecondFragment"
+        android:name="com.example.remind.ui.fragments.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 

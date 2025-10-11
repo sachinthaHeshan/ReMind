@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.ui.fragments.habit
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.remind.R
+import com.example.remind.data.model.Habit
+import com.example.remind.data.repository.HabitRepository
 import com.example.remind.databinding.FragmentDailyHabitsBinding
+import com.example.remind.ui.adapter.HabitAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 /**

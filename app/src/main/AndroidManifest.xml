@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReMind">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ReMind">
             <intent-filter>
@@ -28,13 +28,13 @@
 
         <!-- Water Reminder Broadcast Receiver -->
         <receiver
-            android:name=".WaterReminderReceiver"
+            android:name=".utils.WaterReminderReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <!-- Habit Widget -->
         <receiver
-            android:name=".HabitWidgetProvider"
+            android:name=".widget.HabitWidgetProvider"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

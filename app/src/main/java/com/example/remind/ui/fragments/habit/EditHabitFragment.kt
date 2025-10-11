@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.ui.fragments.habit
 
 import android.app.TimePickerDialog
 import android.os.Bundle
@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.remind.R
+import com.example.remind.data.model.Habit
+import com.example.remind.data.repository.HabitRepository
 import com.example.remind.databinding.FragmentAddHabitBinding
 import com.google.android.material.snackbar.Snackbar
 import java.util.Calendar

@@ -71,14 +71,6 @@
         android:textSize="12sp" />
 
     <!-- Last Updated Time -->
-    <TextView
-        android:id="@+id/widget_updated"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Tap to open"
-        android:textColor="@color/text_secondary"
-        android:textSize="10sp" />
 
 </LinearLayout>
 

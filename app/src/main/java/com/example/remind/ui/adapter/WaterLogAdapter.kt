@@ -1,10 +1,11 @@
-package com.example.remind
+package com.example.remind.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.remind.data.model.WaterLog
 import com.example.remind.databinding.ItemWaterLogBinding
 
 /**

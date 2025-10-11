@@ -1,7 +1,8 @@
-package com.example.remind
+package com.example.remind.data.repository
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.remind.data.model.WaterLog
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.util.Calendar

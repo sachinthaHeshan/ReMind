@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.ui.fragments.mood
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.remind.R
+import com.example.remind.data.model.Mood
+import com.example.remind.data.repository.MoodRepository
 import com.example.remind.databinding.FragmentMoodJournalBinding
+import com.example.remind.ui.adapter.MoodAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

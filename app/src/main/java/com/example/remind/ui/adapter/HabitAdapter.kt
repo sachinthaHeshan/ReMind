@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.ui.adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.remind.R
+import com.example.remind.data.model.Habit
 import com.example.remind.databinding.ItemHabitBinding
 
 /**

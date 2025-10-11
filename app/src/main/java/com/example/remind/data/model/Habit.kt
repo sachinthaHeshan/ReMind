@@ -1,5 +1,6 @@
-package com.example.remind
+package com.example.remind.data.model
 
+import com.example.remind.R
 import com.google.gson.annotations.SerializedName
 import java.util.UUID
 

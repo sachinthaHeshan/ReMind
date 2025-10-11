@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.utils
 
 import android.Manifest
 import android.app.AlarmManager
@@ -13,7 +13,9 @@ import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import java.util.Calendar
+import com.example.remind.R
+import com.example.remind.data.repository.WaterRepository
+import com.example.remind.ui.activity.MainActivity
 
 /**
  * Helper class for managing hydration reminder notifications

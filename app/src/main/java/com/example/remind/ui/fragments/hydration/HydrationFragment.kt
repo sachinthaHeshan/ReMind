@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.ui.fragments.hydration
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -13,7 +13,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.remind.R
+import com.example.remind.data.model.WaterLog
+import com.example.remind.data.repository.WaterRepository
 import com.example.remind.databinding.FragmentHydrationBinding
+import com.example.remind.ui.adapter.WaterLogAdapter
+import com.example.remind.utils.WaterNotificationHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

@@ -1,4 +1,4 @@
-package com.example.remind
+package com.example.remind.ui.activity
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupWithNavController
+import com.example.remind.R
 import com.example.remind.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -86,3 +87,4 @@ class MainActivity : AppCompatActivity() {
                 || super.onSupportNavigateUp()
     }
 }
+
