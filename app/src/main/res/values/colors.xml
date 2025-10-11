@@ -44,6 +44,7 @@
 
     <!-- Progress Colors -->
     <color name="progress_track">#E2E8F0</color>
+    <color name="progress_background">#E2E8F0</color>
 
     <!-- Checkbox Colors -->
     <color name="checkbox_unchecked">#94A3B8</color>

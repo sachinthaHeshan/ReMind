@@ -11,7 +11,7 @@ import java.util.Locale
 /**
  * Repository class to manage Habit data in SharedPreferences
  */
-class HabitRepository(context: Context) {
+class HabitRepository(private val context: Context) {
 
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -31,6 +31,10 @@ class HabitRepository(context: Context) {
             val habits = getAllHabits().toMutableList()
             habits.add(habit)
             saveHabits(habits)
+            
+            // Update widget to show new habit
+            HabitWidgetProvider.updateAllWidgets(context)
+            
             true
         } catch (e: Exception) {
             e.printStackTrace()
@@ -56,9 +60,7 @@ class HabitRepository(context: Context) {
         }
     }
 
-    /**
-     * Get today's habits (reset completion status for new day)
-     */
+
     fun getTodayHabits(): List<Habit> {
         val habits = getAllHabits()
         val today = getCurrentDate()
@@ -70,9 +72,7 @@ class HabitRepository(context: Context) {
         }
     }
 
-    /**
-     * Update habit completion status
-     */
+
     fun updateHabitCompletion(habitId: String, isCompleted: Boolean): Boolean {
         return try {
             val habits = getAllHabits().toMutableList()
@@ -96,6 +96,10 @@ class HabitRepository(context: Context) {
                 habit.isCompleted = isCompleted
                 habits[index] = habit
                 saveHabits(habits)
+                
+                // Update widget to reflect changes
+                HabitWidgetProvider.updateAllWidgets(context)
+                
                 true
             } else {
                 false
@@ -135,6 +139,10 @@ class HabitRepository(context: Context) {
             val habits = getAllHabits().toMutableList()
             habits.removeIf { it.id == habitId }
             saveHabits(habits)
+            
+            // Update widget after deletion
+            HabitWidgetProvider.updateAllWidgets(context)
+            
             true
         } catch (e: Exception) {
             e.printStackTrace()

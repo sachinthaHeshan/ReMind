@@ -3,6 +3,7 @@ package com.example.remind
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,9 @@ import com.example.remind.databinding.ItemHabitBinding
  */
 class HabitAdapter(
     private val onHabitClick: (Habit) -> Unit,
-    private val onHabitChecked: (Habit, Boolean) -> Unit
+    private val onHabitChecked: (Habit, Boolean) -> Unit,
+    private val onEditClick: (Habit) -> Unit,
+    private val onDeleteClick: (Habit) -> Unit
 ) : ListAdapter<Habit, HabitAdapter.HabitViewHolder>(HabitDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HabitViewHolder {
@@ -73,6 +76,26 @@ class HabitAdapter(
                 // Set card click listener
                 cardHabit.setOnClickListener {
                     onHabitClick(habit)
+                }
+                
+                // Set menu button listener
+                btnMenu.setOnClickListener { view ->
+                    val popupMenu = PopupMenu(view.context, view)
+                    popupMenu.menuInflater.inflate(R.menu.habit_item_menu, popupMenu.menu)
+                    popupMenu.setOnMenuItemClickListener { menuItem ->
+                        when (menuItem.itemId) {
+                            R.id.action_edit -> {
+                                onEditClick(habit)
+                                true
+                            }
+                            R.id.action_delete -> {
+                                onDeleteClick(habit)
+                                true
+                            }
+                            else -> false
+                        }
+                    }
+                    popupMenu.show()
                 }
             }
         }

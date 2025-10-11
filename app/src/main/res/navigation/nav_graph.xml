@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_DailyHabitsFragment_to_AddHabitFragment"
             app:destination="@id/AddHabitFragment" />
+        <action
+            android:id="@+id/action_DailyHabitsFragment_to_EditHabitFragment"
+            app:destination="@id/EditHabitFragment" />
     </fragment>
 
     <fragment
@@ -39,6 +42,21 @@
 
         <action
             android:id="@+id/action_AddHabitFragment_to_DailyHabitsFragment"
+            app:destination="@id/DailyHabitsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EditHabitFragment"
+        android:name="com.example.remind.EditHabitFragment"
+        android:label="@string/edit_habit"
+        tools:layout="@layout/fragment_add_habit">
+
+        <argument
+            android:name="habitId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_EditHabitFragment_to_DailyHabitsFragment"
             app:destination="@id/DailyHabitsFragment" />
     </fragment>
 

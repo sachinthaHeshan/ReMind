@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.remind.databinding.FragmentDailyHabitsBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 /**
  * Daily Habits Fragment - Main screen showing list of daily habits
@@ -95,12 +96,50 @@ class DailyHabitsFragment : Fragment() {
                 // Update habit completion status
                 habitRepository.updateHabitCompletion(habit.id, isChecked)
                 loadHabits() // Refresh the list
+            },
+            onEditClick = { habit ->
+                // Navigate to edit habit fragment
+                val action = DailyHabitsFragmentDirections.actionDailyHabitsFragmentToEditHabitFragment(habit.id)
+                findNavController().navigate(action)
+            },
+            onDeleteClick = { habit ->
+                // Show confirmation dialog
+                showDeleteConfirmationDialog(habit)
             }
         )
         
         binding.rvHabits.apply {
             adapter = habitAdapter
             layoutManager = androidx.recyclerview.widget.LinearLayoutManager(requireContext())
+        }
+    }
+    
+    private fun showDeleteConfirmationDialog(habit: Habit) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Delete Habit")
+            .setMessage("Are you sure you want to delete \"${habit.name}\"?")
+            .setPositiveButton("Delete") { _, _ ->
+                deleteHabit(habit)
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+    
+    private fun deleteHabit(habit: Habit) {
+        val success = habitRepository.deleteHabit(habit.id)
+        if (success) {
+            com.google.android.material.snackbar.Snackbar.make(
+                binding.root,
+                "Habit deleted successfully",
+                com.google.android.material.snackbar.Snackbar.LENGTH_SHORT
+            ).show()
+            loadHabits() // Refresh the list
+        } else {
+            com.google.android.material.snackbar.Snackbar.make(
+                binding.root,
+                "Failed to delete habit",
+                com.google.android.material.snackbar.Snackbar.LENGTH_SHORT
+            ).show()
         }
     }
     

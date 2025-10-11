@@ -24,7 +24,7 @@ class WaterNotificationHelper(private val context: Context) {
         private const val CHANNEL_ID = "hydration_reminders"
         private const val CHANNEL_NAME = "Hydration Reminders"
         private const val NOTIFICATION_ID = 1001
-        private const val REMINDER_INTERVAL = 10 * 1000L // 10 seconds for testing (change to 2 * 60 * 60 * 1000L for 2 hours)
+        private const val REMINDER_INTERVAL = 2 * 1000L // 2 seconds for testing
         private const val REQUEST_CODE_BASE = 2000
     }
 
@@ -135,46 +135,6 @@ class WaterNotificationHelper(private val context: Context) {
         }
     }
 
-    /**
-     * Show notification when reminders are started
-     */
-    fun showReminderStartedNotification() {
-        // Check if we have notification permission (Android 13+)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (ActivityCompat.checkSelfPermission(
-                    context,
-                    Manifest.permission.POST_NOTIFICATIONS
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                return
-            }
-        }
-
-        val intent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            putExtra("navigate_to", "hydration")
-        }
-
-        val pendingIntent = PendingIntent.getActivity(
-            context,
-            0,
-            intent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
-
-        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notifications)
-            .setContentTitle(context.getString(R.string.reminder_notification_started))
-            .setContentText(context.getString(R.string.you_will_receive_reminders))
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .setContentIntent(pendingIntent)
-            .setAutoCancel(true)
-            .build()
-
-        with(NotificationManagerCompat.from(context)) {
-            notify(NOTIFICATION_ID + 1, notification)
-        }
-    }
 }
 
 /**

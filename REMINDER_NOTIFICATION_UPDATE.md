@@ -56,7 +56,6 @@ binding.switchReminders.setOnCheckedChangeListener { _, isChecked ->
     if (isChecked) {
         notificationHelper.scheduleHydrationReminders()
         // Show immediate confirmation notification
-        notificationHelper.showReminderStartedNotification() // ← NEW!
         Snackbar.make(binding.root, "Reminders enabled", Snackbar.LENGTH_SHORT).show()
     } else {
         notificationHelper.cancelHydrationReminders()
@@ -67,16 +66,6 @@ binding.switchReminders.setOnCheckedChangeListener { _, isChecked ->
 
 **2. `WaterNotificationHelper.kt`**
 Added new method:
-
-```kotlin
-fun showReminderStartedNotification() {
-    // Check permissions (Android 13+)
-    // Create notification with bell icon
-    // Title: "Reminder notification Started"
-    // Text: "You will receive reminders every 2 hours"
-    // Tap to open Hydration Tracker
-}
-```
 
 **3. `strings.xml`**
 Added new strings:

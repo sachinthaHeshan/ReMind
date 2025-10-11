@@ -174,7 +174,6 @@ class HydrationFragment : Fragment() {
         waterRepository.setRemindersEnabled(true)
         notificationHelper.scheduleHydrationReminders()
         // Show immediate confirmation notification
-        notificationHelper.showReminderStartedNotification()
         Snackbar.make(binding.root, "Reminders enabled - You'll get notified every 10 seconds!", Snackbar.LENGTH_LONG).show()
     }
 
