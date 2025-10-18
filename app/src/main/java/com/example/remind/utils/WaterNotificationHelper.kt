@@ -50,9 +50,6 @@ class WaterNotificationHelper(private val context: Context) {
         }
     }
 
-    /**
-     * Schedule hydration reminders every 10 seconds (for testing)
-     */
     fun scheduleHydrationReminders() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
@@ -70,7 +67,7 @@ class WaterNotificationHelper(private val context: Context) {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        // Use setRepeating for repeating alarms every 10 seconds
+        //  add repeating alarms every 10 seconds
         alarmManager.setRepeating(
             AlarmManager.RTC_WAKEUP,
             triggerTime,
@@ -79,9 +76,6 @@ class WaterNotificationHelper(private val context: Context) {
         )
     }
 
-    /**
-     * Cancel all scheduled hydration reminders
-     */
     fun cancelHydrationReminders() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
@@ -96,7 +90,7 @@ class WaterNotificationHelper(private val context: Context) {
     }
 
     /**
-     * Show hydration reminder notification
+     * show hydration reminder notification
      */
     fun showHydrationNotification() {
         // Check if we have notification permission (Android 13+)
@@ -139,9 +133,6 @@ class WaterNotificationHelper(private val context: Context) {
 
 }
 
-/**
- * BroadcastReceiver to handle water reminder alarms
- */
 class WaterReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val waterRepository = WaterRepository(context)
